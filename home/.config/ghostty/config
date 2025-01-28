@@ -1,0 +1,4 @@
+config-file 	= window
+config-file 	= text
+
+command 	    = zsh -c "tmux attach || tmux"
