@@ -13,7 +13,35 @@ setopt SHARE_HISTORY
 #################
 autoload -U colors && colors
 
-PS1="%{$fg[yellow]%}%~%{$reset_color%} %{$fg[cyan]%}%% %{$reset_color%}"
+function update_prompt() {
+    if [[ -d .git ]]; then
+        branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+        PS1="%{$fg[yellow]%}%~%{$reset_color%} %{$fg[green]%}@$branch%{$reset_color%} %{$fg[cyan]%}%% %{$reset_color%}"
+    else
+        PS1="%{$fg[yellow]%}%~%{$reset_color%} %{$fg[cyan]%}%% %{$reset_color%}"
+    fi
+}
+
+update_prompt
+
+ran_git=false
+function update_on_git() {
+    if [[ ran_git ]]; then
+        update_prompt
+        ran_git=false
+        return
+    fi
+
+    if [[ $(alias $1) == git* ]]; then
+        ran_git=true
+    fi
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd update_prompt
+add-zsh-hook preexec update_on_git
+add-zsh-hook precmd update_on_git
+
 
 #################
 #   bindings    #
