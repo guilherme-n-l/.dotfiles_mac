@@ -96,6 +96,19 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_control", "left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -449,6 +462,17 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 92,
+                        "vendor_id": 5426
+                    },
+                    "ignore": false,
+                    "mouse_flip_vertical_wheel": true
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "simple_modifications": [
