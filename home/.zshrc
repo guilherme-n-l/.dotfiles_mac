@@ -71,8 +71,11 @@ alias gwa='git worktree add'
 alias gwr='git worktree remove'
 alias gwl='git worktree list'
 alias bu='blueutil'
+alias install='brew install'
+alias remove='brew remove'
 
 bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
 
 export EDITOR=nvim
+eval "$(/opt/homebrew/bin/brew shellenv)"

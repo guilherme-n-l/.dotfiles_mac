@@ -1,8 +1,0 @@
-background          = 0F0F18
-background-opacity 	= 0.9
-foreground 		    = DCD7BA
-
-theme 			    = "Kanagawa Dragon"
-
-window-padding-x 	= 5
-window-padding-y 	= 4

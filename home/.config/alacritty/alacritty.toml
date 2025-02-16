@@ -1,0 +1,13 @@
+[window]
+padding = { x = 6, y = 6 }
+opacity = 0.9
+
+[font]
+size = 18
+normal = { family = "FiraCode Nerd Font Mono" }
+
+[general]
+import = ["~/.config/alacritty/kanagawa-dragon.toml"]
+
+[terminal]
+shell = { program = "/bin/zsh" }
