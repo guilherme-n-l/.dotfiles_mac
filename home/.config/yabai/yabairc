@@ -39,3 +39,4 @@ function no_manage {
 no_manage "System Settings"
 no_manage "KeePassXC"
 no_manage "Font Book"
+no_manage "mpv"

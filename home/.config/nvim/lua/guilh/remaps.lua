@@ -118,6 +118,13 @@ local mappings = {
 			teleworktree.create_git_worktree()
 		end,
 	},
+
+	------------------------------
+	--          Misc.           --
+	------------------------------
+
+	-- Custom modes
+	{ "n", "<leader>vmt", ":TextMode<CR>", {silent = true} },
 }
 
 for i = 1, 9 do
