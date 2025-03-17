@@ -78,6 +78,8 @@ bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
 
 export EDITOR=nvim
+export DYLD_LIBRARY_PATH=/usr/local/lib
+
 
 source /opt/homebrew/Cellar/zsh-syntax-highlighting/0.8.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
