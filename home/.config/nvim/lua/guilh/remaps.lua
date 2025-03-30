@@ -124,7 +124,7 @@ local mappings = {
 	------------------------------
 
 	-- Custom modes
-	{ "n", "<leader>vmt", ":TextMode<CR>", {silent = true} },
+	{ "n", "<leader>vtm", ":TextMode<CR>", {silent = false} },
 }
 
 for i = 1, 9 do
