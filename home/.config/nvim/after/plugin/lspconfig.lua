@@ -150,10 +150,11 @@ conform.setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "black" },
+		markdown = { "markdownlint" },
 		-- cpp = { "clang-format" },
 		-- java = { "clang-format" },
 		-- javascript = { "biome" },
-		-- go = { "gci", "goimports" },
+		go = { "gci", "goimports" },
 		-- yaml = { "yamlfmt" },
 	},
 })

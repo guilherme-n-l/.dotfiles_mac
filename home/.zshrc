@@ -33,20 +33,14 @@ declare -A zsh_aliases=(
 ['gf']='git fetch origin'
 ['gp']='git pull'
 ['gp']='git push'
-['gl']="git log \
-    --graph \
-    --abbrev-commit \
-    --decorate \
-    --format=format:'%c(bold blue)%h%c(reset) - \
-    %c(bold cyan)%ad%c(reset) %c(bold green)(%ar)%c(reset)%c(bold yellow)%d%c(reset)%n''%c(white)%s%c(reset) %c(dim white) - \
-    %an%c(reset)' --all"
-    ['gwa']='git worktree add'
-    ['gwr']='git worktree remove'
-    ['gwl']='git worktree list'
-    ['bu']='blueutil'
-    ['install']='brew install'
-    ['remove']='brew remove'
-    ['..']='cd ..'
+['gl']="git log --graph --abbrev-commit --decorate"
+['gwa']='git worktree add'
+['gwr']='git worktree remove'
+['gwl']='git worktree list'
+['bu']='blueutil'
+['install']='brew install'
+['remove']='brew remove'
+['..']='cd ..'
 )
 
 declare -A zsh_binds=(
@@ -54,6 +48,7 @@ declare -A zsh_binds=(
 ['^[[1;3D']='backward-word'
 ['^[[1;5C']='forward-word'
 ['^[[1;5D']='backward-word'
+['^[?']='backward-kill-word'
 ['^R']='history-incremental-search-backward'
 )
 

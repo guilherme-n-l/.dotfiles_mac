@@ -80,7 +80,6 @@ require("lazy").setup({
 	},
 	"mbbill/undotree",
 	"L3MON4D3/LuaSnip",
-	"stevearc/aerial.nvim",
 	"tpope/vim-fugitive",
 	"theprimeagen/git-worktree.nvim",
 })
