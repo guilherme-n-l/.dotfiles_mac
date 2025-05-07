@@ -153,7 +153,7 @@ conform.setup({
 		markdown = { "markdownlint" },
 		-- cpp = { "clang-format" },
 		-- java = { "clang-format" },
-		-- javascript = { "biome" },
+		javascript = { "biome", "prettier"},
 		go = { "gci", "goimports" },
 		-- yaml = { "yamlfmt" },
 	},
