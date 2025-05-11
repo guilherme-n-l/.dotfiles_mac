@@ -109,6 +109,10 @@ function nh() {
     nohup $@ &> /dev/null &
 }
 
+function zread() {
+    nh zathura $@
+}
+
 function fcd_widget() {
   zle -I
   fcd
