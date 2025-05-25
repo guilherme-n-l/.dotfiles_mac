@@ -27,6 +27,7 @@ declare -A zsh_aliases=(
 ['lg']='lazygit'
 ['gs']='git status'
 ['gc']='git commit'
+['gcl']='git clone'
 ['gcfg']='git config'
 ['gco']='git checkout'
 ['gf']='git fetch origin'
@@ -80,7 +81,7 @@ zsh_sources=(
 #################
 
 function yz() {
-    local tmp="$(mktemp -t "yazi-cwd.xxxxxx")"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
     yazi "$@" --cwd-file="$tmp"
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$pwd" ]; then
         cd -- "$cwd"

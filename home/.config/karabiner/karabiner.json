@@ -19,7 +19,7 @@
                                     "key_code": "t",
                                     "modifiers": { "mandatory": ["left_option", "left_command"] }
                                 },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && alacritty -e bash -c \"tmux attach || tmux\"' > /dev/null 2>&1 &" }],
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && wezterm'" }],
                                 "type": "basic"
                             },
                             {
@@ -38,7 +38,7 @@
                             {
                                 "from": {
                                     "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_option"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai --restart-service' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -46,71 +46,71 @@
                             {
                                 "from": {
                                     "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_option"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus west' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_option"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus south' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_option"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus north' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_option"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus east' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus west' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus south' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus north' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus east' > /dev/null 2>&1 &" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "h",
                                     "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus west' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus south' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus north' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus east' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus west' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus south' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus north' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --focus east' > /dev/null 2>&1 &" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --resize left:-20:0' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -118,7 +118,7 @@
                             {
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --resize top:0:+20' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -126,7 +126,7 @@
                             {
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --resize top:0:-20' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -134,7 +134,7 @@
                             {
                                 "from": {
                                     "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control", "left_shift"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --resize left:+20:0' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -150,7 +150,7 @@
                             {
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "mandatory": ["left_option"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --toggle float' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -158,7 +158,7 @@
                             {
                                 "from": {
                                     "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_option"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --toggle zoom-fullscreen' > /dev/null 2>&1 &" }],
                                 "type": "basic"
@@ -166,7 +166,7 @@
                             {
                                 "from": {
                                     "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option"] }
+                                    "modifiers": { "mandatory": ["left_option", "left_control"] }
                                 },
                                 "to": [{ "shell_command": "nohup zsh -c 'source ~/.zshrc && yabai -m window --toggle split' > /dev/null 2>&1 &" }],
                                 "type": "basic"

@@ -33,15 +33,15 @@ for f in $R_CONFIG_DIR/*; do
     R_DIR=$PWD/"$R_CONFIG_DIR"/$(basename $f)
 
     if $should_copy; then
-        echo "+ cp $R_DIR $(dirname $L_DIR)"
-        cp $R_DIR $(dirname $L_DIR)
+        echo "+ cp -r $R_DIR $(dirname $L_DIR)"
+        cp -r $R_DIR $(dirname $L_DIR)
     else
         echo "+ ln -sf $R_DIR $(dirname $L_DIR)"
         ln -sf $R_DIR $(dirname $L_DIR)
     fi
 done
 
-Z=("home/.zshrc" "home/.zprofile")
+Z=("home/.zshrc")
 
 for f in "${Z[@]}"; do
     L_DIR=$HOME/$(basename $f)
@@ -62,8 +62,8 @@ for f in "${Z[@]}"; do
     R_DIR=$PWD/$f
 
     if $should_copy; then
-        echo "+ cp $R_DIR $L_DIR"
-        cp $R_DIR $L_DIR
+        echo "+ cp -r $R_DIR $L_DIR"
+        cp -r $R_DIR $L_DIR
     else
         echo "+ ln -sf $R_DIR $L_DIR"
         ln -sf $R_DIR $L_DIR
