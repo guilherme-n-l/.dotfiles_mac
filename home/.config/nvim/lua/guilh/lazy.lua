@@ -40,7 +40,7 @@ require("lazy").setup({
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-    "mateusbraga/vim-spell-pt-br",
+	"mateusbraga/vim-spell-pt-br",
 	"hrsh7th/nvim-cmp",
 	"stevearc/conform.nvim",
 	"zapling/mason-conform.nvim",
@@ -72,6 +72,7 @@ require("lazy").setup({
 	},
 	"theprimeagen/harpoon",
 	--------- Language Specific ---------
+	"Kicamon/markdown-table-mode.nvim",
 	--------- Utilities ---------
 	"lambdalisue/suda.vim",
 	{

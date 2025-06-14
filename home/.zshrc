@@ -15,6 +15,7 @@ PS1="%{$fg[yellow]%}%~%{$reset_color%} %{$fg[cyan]%}%% %{$reset_color%}"
 #################
 #   VARIABLES   #
 #################
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -54,7 +55,8 @@ declare -A zsh_binds=(
 ['^[[1;3D']='backward-word'
 ['^[[1;5C']='forward-word'
 ['^[[1;5D']='backward-word'
-['^[?']='backward-kill-word'
+['^[^?']='backward-kill-word'
+['^H']='backward-kill-word'
 ['^R']='history-incremental-search-backward'
 ['^F']='fcd_widget'
 )
@@ -103,7 +105,7 @@ function fcd() {
         args+=" -E \"$d\""
     done
 
-    eval "cd \$(fd --hidden $args --type d | fzf)"
+    eval "cd \$(fd --hidden $args --type d | fzf || pwd)"
 }
 
 function nh() {
@@ -126,5 +128,4 @@ for k in ${(k)zsh_aliases}; alias "$k"="${zsh_aliases[$k]}";
 for k in ${(k)zsh_binds}; bindkey "$k" "${zsh_binds[$k]}";
 for k in ${(k)zsh_exports}; export "$k"="${zsh_exports[$k]}";
 for i in $zsh_sources; source $i;
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
